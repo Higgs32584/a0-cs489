@@ -1,3 +1,7 @@
+// How much ETH is in the wallet address:
+// 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045. Also print the value
+// in USD
+
 const axios = require('axios');
 const address = '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045';
 const api_key = '5RS4GI778U5U174VWWCB4GVQM2BIKFJWTJ';
@@ -16,8 +20,9 @@ axios.get(apiEndpoint2)
 
 axios.get(apiEndpoint)
   .then(response => {
-    total_eth=response.data['result']/(Math.pow(10,18));
-    console.log(parseInt(total_eth*ethPrice));
+    total_eth = response.data['result']/(Math.pow(10,18));
+    console.log("Total eth in wallet(ETH):",parseInt(total_eth));
+    console.log("Total eth in wallet(USD):",parseInt(total_eth*ethPrice));
   })
   .catch(error => {
     console.log(error);
