@@ -1,3 +1,4 @@
+// Print the current price of ETH in USD and BTC
 const axios = require('axios');
 const api_key = '5RS4GI778U5U174VWWCB4GVQM2BIKFJWTJ';
 const apiEndpoint2=`https://api.etherscan.io/api?module=stats&action=ethprice&apikey=${api_key}`;
