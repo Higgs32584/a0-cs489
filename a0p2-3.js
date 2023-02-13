@@ -5,7 +5,9 @@ axios.get(apiEndpoint2)
   .then(response => {
     ethPrice=response.data['result']['ethusd'];
     ethPricebtc=response.data['result']['ethbtc'];
+    console.log("ETH Price in USD:")
     console.log(ethPrice);
+    console.log("ETH Price in BTC:")
     console.log(ethPricebtc);
   })
   .catch(error => {
